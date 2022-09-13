@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- header section  -->
+        <div id="main-header" class="position-relative">
+            <!-- slider  -->
+            <div>
+                <div
+                    id="main-carousel"
+                    class="carousel slide"
+                    data-bs-touch="false"
+                >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img
+                                src="img/carousel/one.jpg"
+                                class="d-block w-100"
+                                alt="fashion image"
+                            />
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                                src="img/carousel/two.jpg"
+                                class="d-block w-100"
+                                alt="fashion image"
+                            />
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                                src="img/carousel/three.jpg"
+                                class="d-block w-100"
+                                alt="fashion image"
+                            />
+                        </div>
+                        <div class="carousel-item">
+                            <img
+                                src="img/carousel/four.jpg"
+                                class="d-block w-100"
+                                alt="fashion image"
+                            />
+                        </div>
+                    </div>
+                    <div class="container position-relative bottom-0 end-0">
+                        <div class="position-absolute end-0 carousel-btn">
+                            <button
+                                type="button"
+                                data-bs-target="#main-carousel"
+                                data-bs-slide="prev"
+                                class="prev"
+                            >
+                                <span>
+                                    <i class="fa-solid fa-arrow-left-long"></i>
+                                </span>
+                            </button>
+                            <button
+                                type="button"
+                                data-bs-target="#main-carousel"
+                                data-bs-slide="next"
+                                class="next"
+                            >
+                                <span>
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content  -->
+            <div class="content w-100 h-100 position-absolute top-0 start-0">
+                <header class="mt-4">
+                    <div class="container">
+                        <nav class="row">
+                            <div class="col">
+                                <a class="navbar-brand" href="#">
+                                    <img src="img/brand.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="col">
+                                <ul
+                                    class="navbar-nav d-flex flex-row justify-content-center"
+                                >
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            aria-current="page"
+                                            href="#"
+                                            >men</a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            aria-current="page"
+                                            href="#"
+                                            >women</a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link"
+                                            aria-current="page"
+                                            href="#"
+                                            >kids</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <button class="text-white px-3 mx-3">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                <button class="text-white px-3 mx-3">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                                <button class="text-white px-3 mx-3">
+                                    <i class="fa-regular fa-user"></i>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <!-- offer  -->
+            <section class=" offers py-5 ">
+                <div class="container">
+                    <div class="row">
+                        <% [{title: 'free shipping', dis: 'on purchases over $199', icon: '<i class="fa-solid fa-truck"></i>'},
+                         {title: '99% Satisfied Customers', dis: 'Our clients opinions <br/> speak for themselves', icon: '<i class="fa-regular fa-face-smile"></i>'},
+                         {title: 'Originality Guaranteed', dis: '30 days warranty for each <br/> product from our store', icon: '<i class="fa-solid fa-dollar-sign"></i>'},].forEach((item) => { %>
+                        <div class=" col option d-flex align-items-start  ">
+                            <div class=" icon d-inline-block">
+                                <%- item.icon %> 
+                            </div>
+                            <div class=" ms-3 ">
+                                <p class=" mb-0 title "><%- item.title %> </p>
+                                <p class=" mb-0 dis "><%- item.dis %> </p>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </section>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+            integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
