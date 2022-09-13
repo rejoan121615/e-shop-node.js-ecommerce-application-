@@ -12,6 +12,10 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
@@ -83,50 +87,141 @@
             </div>
             <!-- content  -->
             <div class="content w-100 h-100 position-absolute top-0 start-0">
-                <%- include('../partials/navbar.ejs') %> 
+                <%- include('../partials/navbar.ejs') %>
             </div>
         </div>
         <!-- offer  -->
-        <section class=" offers py-5 ">
+
+        <section class="offers py-5">
             <div class="container">
                 <div class="row">
-                    <% [{title: 'free shipping', dis: 'on purchases over $199', icon: '<i class="fa-solid fa-truck"></i>'},
-                     {title: '99% Satisfied Customers', dis: 'Our clients opinions <br/> speak for themselves', icon: '<i class="fa-regular fa-face-smile"></i>'},
-                     {title: 'Originality Guaranteed', dis: '30 days warranty for each <br/> product from our store', icon: '<i class="fa-solid fa-dollar-sign"></i>'},].forEach((item) => { %>
-                    <div class=" col option d-flex align-items-start  ">
-                        <div class=" icon d-inline-block">
-                            <%- item.icon %> 
+                    <div class="col option d-flex align-items-start">
+                        <div class="icon d-inline-block">
+                            <i class="fa-solid fa-truck"></i>
                         </div>
-                        <div class=" ms-3 ">
-                            <p class=" mb-0 title "><%- item.title %> </p>
-                            <p class=" mb-0 dis "><%- item.dis %> </p>
+                        <div class="ms-3">
+                            <p class="mb-0 title">free shipping</p>
+                            <p class="mb-0 dis">on purchases over $199</p>
                         </div>
                     </div>
-                    <% }) %>
+                    <div class="col option d-flex align-items-start">
+                        <div class="icon d-inline-block">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="mb-0 title">99% Satisfied Customers</p>
+                            <p class="mb-0 dis">on purchases over $199</p>
+                        </div>
+                    </div>
+                    <div class="col option d-flex align-items-start">
+                        <div class="icon d-inline-block">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="mb-0 title">free shipping</p>
+                            <p class="mb-0 dis">on purchases over $199</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
-       <section>
-        <div class="container">
-            <div class="row justify-content-between ">
-                <% [{title: 'New arrivals <br/> are now in', bgImg: 'img/arrival/one.png' , btn: {txt: 'show collection',url: ''}, style: "48%"},{title: 'basic t-shirts <br/>$29,99', bgImg: 'img/arrival/two.png', btn: {txt: 'more details',url: ''}, style: '24%'},{title: 'sales this <br />summer', bgImg: 'img/arrival/three.png', btn: {txt: 'view all',url: ''}, style: '24%'},].forEach((item) => { %>
-                    <div class=" card-arrival " style="background: transparent url('<%- item.bgImg %>') no-repeat center center; background-size: cover; width: <%- item.style %>  ;">
+        <!-- feature  -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div
+                        class="card-arrival"
+                        style="
+                            background: transparent url('img/arrival/one.png')
+                                no-repeat center center;
+                            background-size: cover;
+                            width: 48%;
+                        "
+                    >
                         <div>
-                            <p><%- item.title %> </p>
-                            <a href="<%- item.url %> "><%- item.btn.txt %> </a>
+                            <p>
+                                New arrivals <br />
+                                are now in
+                            </p>
+                            <a href="" class=" border-0 ">show collection</a>
                         </div>
                     </div>
-                <% }) %> 
+                    <div
+                        class="card-arrival"
+                        style="
+                            background: transparent url('img/arrival/one.png')
+                                no-repeat center center;
+                            background-size: cover;
+                            width: 24%;
+                        "
+                    >
+                        <div>
+                            <p>
+                                New arrivals <br />
+                                are now in
+                            </p>
+                            <a href="">show collection</a>
+                        </div>
+                    </div>
+                    <div
+                        class="card-arrival"
+                        style="
+                            background: transparent url('img/arrival/one.png')
+                                no-repeat center center;
+                            background-size: cover;
+                            width: 24%;
+                        "
+                    >
+                        <div>
+                            <p>
+                                New arrivals <br />
+                                are now in
+                            </p>
+                            <a href="">show collection</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-       </section>
+        </section>
+        <!-- selected product for user  -->
+        <section class=" my-5 ">
+            <!-- bar  -->
+            <div class="container d-flex align-items-center justify-content-between ">
+                <h2>Slected just for you</h2>
+                <a href="" class=" cus-btn">show more</a>
+            </div>
+            <div class="container px-0 mt-5 ">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <%- include('../partials/product.ejs') %>
+                        </div>
+                        <div class="swiper-slide">
+                            <%- include('../partials/product.ejs') %>
+                        </div>
+                        <div class="swiper-slide">
+                            <%- include('../partials/product.ejs') %>
+                        </div>
+                        <div class="swiper-slide">
+                            <%- include('../partials/product.ejs') %>
+                        </div>
+                        <div class="swiper-slide">
+                            <%- include('../partials/product.ejs') %>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
             integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

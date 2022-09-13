@@ -11,6 +11,30 @@ button {
   width: 130px;
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
+.text-mid {
+  font-weight: 500;
+}
+
+.cus-btn, .card-arrival a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 999px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+}
+
 #main-header {
   width: 100%;
   height: 100vh;
@@ -67,7 +91,7 @@ button {
   background-color: white;
 }
 .offers .icon {
-  background-color: #FFF3DF;
+  background-color: #fff3df;
   padding: 10px 16px;
   color: #fbb03b;
   border-radius: 6px;
@@ -94,19 +118,24 @@ button {
   text-transform: capitalize;
   color: white;
 }
-.card-arrival a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  border-radius: 999px;
-  padding-left: 25px;
-  padding-right: 25px;
+.product .cart-btn {
+  border: 1px solid #484848;
+  padding: 6px 8px;
+  border-radius: 5px;
+  right: 10px;
+  top: 10px;
+}
+.product .product-title {
+  font-weight: bold;
+  text-transform: capitalize;
   color: black;
-  font-weight: 700;
-  background-color: white;
-  text-decoration: none;
-  text-transform: uppercase;
+}
+
+.swiper .swiper-button-next {
+  color: black;
+}
+.swiper .swiper-button-prev {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
