@@ -109,9 +109,9 @@
 
        <section>
         <div class="container">
-            <div class="row gx-5 ">
-                <% [{title: 'New arrivals <br/> are now in', bgImg: 'img/arrival/one.png' , btn: {txt: 'show collection',url: ''}, class: "col-6"},{title: 'basic t-shirts <br/>$29,99', bgImg: 'img/arrival/two.png', btn: {txt: 'more details',url: ''}, class: 'col-3'},{title: 'sales this <br />summer', bgImg: 'img/arrival/three.png', btn: {txt: 'view all',url: ''},class: 'col-3'},].forEach((item) => { %>
-                    <div class=" <%- item.class %> card-arrival " style="background: transparent url('<%- item.bgImg %>') no-repeat center center; background-size: cover;">
+            <div class="row justify-content-between ">
+                <% [{title: 'New arrivals <br/> are now in', bgImg: 'img/arrival/one.png' , btn: {txt: 'show collection',url: ''}, style: "48%"},{title: 'basic t-shirts <br/>$29,99', bgImg: 'img/arrival/two.png', btn: {txt: 'more details',url: ''}, style: '24%'},{title: 'sales this <br />summer', bgImg: 'img/arrival/three.png', btn: {txt: 'view all',url: ''}, style: '24%'},].forEach((item) => { %>
+                    <div class=" card-arrival " style="background: transparent url('<%- item.bgImg %>') no-repeat center center; background-size: cover; width: <%- item.style %>  ;">
                         <div>
                             <p><%- item.title %> </p>
                             <a href="<%- item.url %> "><%- item.btn.txt %> </a>
