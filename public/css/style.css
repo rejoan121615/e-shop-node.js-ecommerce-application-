@@ -81,4 +81,32 @@ button {
   color: #ababab;
 }
 
+.card-arrival {
+  height: 375px;
+  display: flex;
+  align-items: center;
+  padding-left: 56px;
+  background-color: rgba(0, 0, 0, 0.229);
+}
+.card-arrival p {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: white;
+}
+.card-arrival a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 999px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -85,7 +85,7 @@ button {
 
 .offers {
     background-color: white;
-    
+
   .icon {
     background-color: #FFF3DF;
     padding: 10px 16px;
@@ -100,4 +100,36 @@ button {
   .dis {
     color: #ababab;
   }
+}
+
+
+
+
+// new arrival 
+.card-arrival {
+    height: 375px;
+    display: flex;
+    align-items: center;
+    padding-left: 56px;
+    background-color: rgba(0, 0, 0, 0.229);
+    p {
+        font-size: 25px;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: white;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border-radius: 999px;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: black;
+        font-weight: 700;
+        background-color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 }

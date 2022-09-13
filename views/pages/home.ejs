@@ -87,25 +87,40 @@
             </div>
         </div>
         <!-- offer  -->
-            <section class=" offers py-5 ">
-                <div class="container">
-                    <div class="row">
-                        <% [{title: 'free shipping', dis: 'on purchases over $199', icon: '<i class="fa-solid fa-truck"></i>'},
-                         {title: '99% Satisfied Customers', dis: 'Our clients opinions <br/> speak for themselves', icon: '<i class="fa-regular fa-face-smile"></i>'},
-                         {title: 'Originality Guaranteed', dis: '30 days warranty for each <br/> product from our store', icon: '<i class="fa-solid fa-dollar-sign"></i>'},].forEach((item) => { %>
-                        <div class=" col option d-flex align-items-start  ">
-                            <div class=" icon d-inline-block">
-                                <%- item.icon %> 
-                            </div>
-                            <div class=" ms-3 ">
-                                <p class=" mb-0 title "><%- item.title %> </p>
-                                <p class=" mb-0 dis "><%- item.dis %> </p>
-                            </div>
+        <section class=" offers py-5 ">
+            <div class="container">
+                <div class="row">
+                    <% [{title: 'free shipping', dis: 'on purchases over $199', icon: '<i class="fa-solid fa-truck"></i>'},
+                     {title: '99% Satisfied Customers', dis: 'Our clients opinions <br/> speak for themselves', icon: '<i class="fa-regular fa-face-smile"></i>'},
+                     {title: 'Originality Guaranteed', dis: '30 days warranty for each <br/> product from our store', icon: '<i class="fa-solid fa-dollar-sign"></i>'},].forEach((item) => { %>
+                    <div class=" col option d-flex align-items-start  ">
+                        <div class=" icon d-inline-block">
+                            <%- item.icon %> 
                         </div>
-                        <% }) %>
+                        <div class=" ms-3 ">
+                            <p class=" mb-0 title "><%- item.title %> </p>
+                            <p class=" mb-0 dis "><%- item.dis %> </p>
+                        </div>
                     </div>
+                    <% }) %>
                 </div>
-            </section>
+            </div>
+        </section>
+
+       <section>
+        <div class="container">
+            <div class="row gx-5 ">
+                <% [{title: 'New arrivals <br/> are now in', bgImg: 'img/arrival/one.png' , btn: {txt: 'show collection',url: ''}, class: "col-6"},{title: 'basic t-shirts <br/>$29,99', bgImg: 'img/arrival/two.png', btn: {txt: 'more details',url: ''}, class: 'col-3'},{title: 'sales this <br />summer', bgImg: 'img/arrival/three.png', btn: {txt: 'view all',url: ''},class: 'col-3'},].forEach((item) => { %>
+                    <div class=" <%- item.class %> card-arrival " style="background: transparent url('<%- item.bgImg %>') no-repeat center center; background-size: cover;">
+                        <div>
+                            <p><%- item.title %> </p>
+                            <a href="<%- item.url %> "><%- item.btn.txt %> </a>
+                        </div>
+                    </div>
+                <% }) %> 
+            </div>
+        </div>
+       </section>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
             integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
